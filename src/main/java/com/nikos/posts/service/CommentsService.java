@@ -15,13 +15,9 @@ public interface CommentsService {
 	public Page<CommentDto> findAllComments(Pageable pageable);
 
 	public Page<CommentDto> findAllCommentsSorted(Pageable pageable);
-	
-//	public Page<CommentDto> findCommentsByUserId(Long id, Pageable page);
-	
+		
 	public Optional<Comment> findCommentById(Long id);
-	
-//	public Page<Comment> findCommentsByPostId(Long id, Pageable page);
-	
+		
 	CommentDto saveComment(HttpServletRequest request, CommentDto comment);
 
 	CommentDto updateComment(HttpServletRequest request, Long id, CommentDto commentDto);

@@ -73,7 +73,7 @@ public class CommentsServiceImpl implements CommentsService {
 		Comment comment = commentsRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Comment with id " + id + " not found"));
 		String userName = request.getUserPrincipal().getName();
 		if (!comment.getUser().getUsername().equals(userName)) {
-			throw new AuthorizationException("You can't edit this post");
+			throw new AuthorizationException("You can't edit this comment");
 		}
 		comment.setId(id);
 		User user = userRepository.findByUsername(userName).get();

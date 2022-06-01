@@ -1,6 +1,12 @@
 # social-media-app
 
-<h4>Run the above sql statements after you run the app</h4>
+## Run Spring Boot application
+```
+mvn spring-boot:run
+```
 
-INSERT INTO roles(name) VALUES('ROLE_USER');<br/>
+## Run the above SQL statements
+```
+INSERT INTO roles(name) VALUES('ROLE_USER');
 INSERT INTO roles(name) VALUES('ROLE_ADMIN');
+```
